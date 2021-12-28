@@ -26,6 +26,7 @@
                 add_logs($user, $conn); #dodaje pierwszy log o danym użytkowniku
                 session_start();
                 $_SESSION['username'] = $user; #sesja
+                header("Refresh:0");
             }
             else
             {
@@ -37,36 +38,41 @@
     else
     {
         if(isset($_REQUEST['login']))
-    {
-        $user = stripslashes($_REQUEST['login']);
-        $user = mysqli_real_escape_string($conn,$user);
-
-        $pass = stripslashes($_REQUEST['password']);
-	    $pass = mysqli_real_escape_string($conn,$pass);
-
-        $pass= md5($pass);
-
-        $sql = "SELECT * FROM `uzytkownicy` WHERE login='$user' and haslo='$pass'";
-
-        $res = mysqli_query($conn, $sql) or die(mysqli_error());
-        $rows = mysqli_num_rows($res);
-
-        if($rows == 1) #jeżeli jest tylko jeden użytkownik to nas do niego loguje
         {
-            add_logs($user,$conn);
-            
-            $_SESSION['username'] = $user;
-        }
-        else
-        {
-            echo "błędny login lub hasło";
-        }
-        }
-        else
-        {
-            echo "Nie podano loginu lub hasła";
+            $user = stripslashes($_REQUEST['login']);
+            $user = mysqli_real_escape_string($conn,$user);
+
+            $pass = stripslashes($_REQUEST['password']);
+            $pass = mysqli_real_escape_string($conn,$pass);
+
+            $pass= md5($pass);
+
+            $sql = "SELECT * FROM `uzytkownicy` WHERE login='$user' and haslo='$pass'";
+
+            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+            $rows = mysqli_num_rows($res);
+
+            if($rows == 1) #jeżeli jest tylko jeden użytkownik to nas do niego loguje
+            {
+                add_logs($user,$conn);
+                $_SESSION['username'] = $user;
+                header("Refresh:0");
+            }
+            else
+            {
+                echo "błędny login lub hasło";
+            }
         }
     }
 
+    if(isset($_SESSION['username'])){
+        $postnames = array_keys($_POST);
+        foreach($postnames as $value){
+            if($value == 'logout'){
+                session_destroy();
+                header("Refresh:0");
+            }
+        }
+    }
     $conn -> close();
 ?>

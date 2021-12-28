@@ -14,21 +14,22 @@
 </head>
 <body class="vertical-container">
     <div id="log_in" class="log_bg log_display_a">
-        <form class="vertical-container box">
+        <form method="POST" action="" class="vertical-container box">
             <img src="css/logo_f.png">
-                <input type="text" placeholder="Login">
-                <input type="password" placeholder="Hasło">
-                <input type="submit" value="Zaloguj się">
-            </form>
+            <input type="text" name="login" placeholder="Login">
+            <input type="password" name="password" placeholder="Hasło">
+            <input type="submit" value="Zaloguj się">
+        </form>
     </div>
     <div id="sign_in" class="log_bg log_display_a">
-        <form class="vertical-container box">
+        <form method="POST" action="" class="vertical-container box">
             <img src="css/logo_f.png">
-                <input type="text" placeholder="Podaj swój login">
-                <input type="password" placeholder="Hasło">
+                <input type="hidden" name="reg" value="reg">
+                <input type="text" name="login" placeholder="Podaj swój login">
+                <input type="password" name="password" placeholder="Hasło">
                 <input type="password" placeholder="Powtórz hasło">
                 <input type="submit" value="Utwórz konto">
-            </form>
+        </form>
     </div>
     <?php
         require("registration.php");
@@ -39,10 +40,28 @@
             <div class="horizontal-container nav-container__right-side">
                 <a href="index.php" class="pointer">Najnowsze</a>
                 <a href="search.php" class="pointer">Szukaj</a>
-                <a href="add.php" class="pointer nav-active">Wstaw <?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];} ?></a>
-                <span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>
+                <a href="add.php" class="pointer nav-active">Wstaw</a>
+                <?php
+                    if(isset($_SESSION['username']))
+                    { 
+                        echo '<span class="logged_user">#'.$_SESSION['username'].'</span>';
+                    }else
+                    {
+                        echo '<span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>';
+                    }
+                 ?>
                 <span class="nav-sep"></span>
-                <span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>
+                <?php
+                    if(isset($_SESSION['username']))
+                    { 
+                        echo '<form action="" method="POST">';
+                        echo '<input type="submit" name="logout" class="nav-button pointer" value="Wyloguj się">';
+                        echo '</form>';
+                    }else
+                    {
+                        echo '<span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>';
+                    }
+                 ?>
             </div>
         </div>
     </nav>
@@ -52,7 +71,7 @@
             <span class="header__line--blue"></span>
         </span>
     </div>
-    <form class="width row" action="add_new.php" method="get">
+    <form class="width row" action="upload.php" method="POST" enctype="multipart/form-data">
         <div class="col-sm-3 col">
                 <span>Tytuł</span>
                 <input type="text" name="title" />
@@ -66,13 +85,13 @@
                     <option value="45">45 minut</option>
                     <option value="60">godzina</option>
                 </select>
-                <input type="file" name="image">
-                <input type="submit" value="Dodaj szota" class="submit">
+                <input type="file" name="image" id="image">
+                <input type="submit" name="submit" value="Dodaj szota" class="submit">
         </div>
         <div class="col-sm-3 col">
                 Wybierz kategorie
                 <label class="search-box__row">
-                    <input name="category[]" id="chceck-smieszne" type="checkbox" class="checkbox">
+                    <input name="category[]" id="chceck-smieszne" value="Śmieszne" type="checkbox" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">
@@ -80,7 +99,7 @@
                     </div>
                 </label>
                 <label class="search-box__row">
-                    <input name="category[]" id="chceck-Krajobraz" type="checkbox" class="checkbox">
+                    <input name="category[]" id="chceck-Krajobraz" value="Krajobraz" type="checkbox" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">
@@ -88,7 +107,7 @@
                     </div>
                 </label>
                 <label class="search-box__row">
-                    <input name="category[]" id="chceck-sztuka" type="checkbox" class="checkbox">
+                    <input name="category[]" id="chceck-sztuka" type="checkbox" value="Sztuka" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">

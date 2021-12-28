@@ -15,18 +15,19 @@
 </head>
 <body class="vertical-container">
     <div id="log_in" class="log_bg log_display_a">
-        <form class="vertical-container box">
+        <form method="POST" action="" class="vertical-container box">
             <img src="css/logo_f.png">
-            <input type="text" placeholder="Login">
-            <input type="password" placeholder="Hasło">
+            <input type="text" name="login" placeholder="Login">
+            <input type="password" name="password" placeholder="Hasło">
             <input type="submit" value="Zaloguj się">
         </form>
     </div>
     <div id="sign_in" class="log_bg log_display_a">
-        <form class="vertical-container box">
+        <form method="POST" action="" class="vertical-container box">
             <img src="css/logo_f.png">
-                <input type="text" placeholder="Podaj swój login">
-                <input type="password" placeholder="Hasło">
+                <input type="hidden" name="reg" value="reg">
+                <input type="text" name="login" placeholder="Podaj swój login">
+                <input type="password" name="password" placeholder="Hasło">
                 <input type="password" placeholder="Powtórz hasło">
                 <input type="submit" value="Utwórz konto">
         </form>
@@ -40,10 +41,29 @@
             <div class="horizontal-container nav-container__right-side">
                 <a href="index.php" class="pointer">Najnowsze</a>
                 <a href="search.php" class="pointer nav-active">Szukaj</a>
-                <a href="add.php" class="pointer">Wstaw <?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];} ?></a>
-                <span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>
+                <a href="add.php" class="pointer">Wstaw</a>
+                <?php
+                    if(isset($_SESSION['username']))
+                    { 
+                        echo '<span class="logged_user">#'.$_SESSION['username'].'</span>';
+                    }else
+                    {
+                        echo '<span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>';
+                    }
+                 ?>
+                
                 <span class="nav-sep"></span>
-                <span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>
+                <?php
+                    if(isset($_SESSION['username']))
+                    { 
+                        echo '<form action="" method="POST">';
+                        echo '<input type="submit" name="logout" class="nav-button pointer" value="Wyloguj się">';
+                        echo '</form>';
+                    }else
+                    {
+                        echo '<span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>';
+                    }
+                 ?>
             </div>
         </div>
     </nav>
