@@ -30,13 +30,16 @@
                 <input type="submit" value="Utwórz konto">
             </form>
     </div>
+    <?php
+        require("registration.php");
+    ?>
     <nav class="nav fixed-top container-fluid">
         <div class="horizontal-container width">
             <img src="css/logo.png">
             <div class="horizontal-container nav-container__right-side">
                 <a href="index.php" class="pointer nav-active">Najnowsze</a>
                 <a href="search.php" class="pointer">Szukaj</a>
-                <a href="add.php" class="pointer">Wstaw</a>
+                <a href="add.php" class="pointer">Wstaw <?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];} ?></a>
                 <span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>
                 <span class="nav-sep"></span>
                 <span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>
@@ -49,27 +52,27 @@
             <span class="header__line--blue"></span>
         </span>
     </div>
-    <form class="width row" action="add.php" method="get">
+    <form class="width row" action="add_new.php" method="get">
         <div class="col-sm-3 col">
                 <span>Tytuł</span>
-                <input type="text" />
+                <input type="text" name="title" />
                 <span>Opis</span>
-                <textarea></textarea>
+                <textarea name="description"></textarea>
         </div>
         <div class="col-sm-3 col">
                 Czas do wygaśnięcia
-                <select id="cars" name="cars">
+                <select name="expire">
                     <option value="30">30 minut</option>
                     <option value="45">45 minut</option>
                     <option value="60">godzina</option>
                 </select>
-                <input type="file">
+                <input type="file" name="image">
                 <input type="submit" value="Dodaj szota" class="submit">
         </div>
         <div class="col-sm-3 col">
                 Wybierz kategorie
                 <label class="search-box__row">
-                    <input name="chceck-smieszne" value="smieszne" type="checkbox" class="checkbox">
+                    <input name="category[]" id="chceck-smieszne" type="checkbox" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">
@@ -77,7 +80,7 @@
                     </div>
                 </label>
                 <label class="search-box__row">
-                    <input id="chceck-Krajobraz" type="checkbox" class="checkbox">
+                    <input name="category[]" id="chceck-Krajobraz" type="checkbox" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">
@@ -85,7 +88,7 @@
                     </div>
                 </label>
                 <label class="search-box__row">
-                    <input id="chceck-sztuka" type="checkbox" class="checkbox">
+                    <input name="category[]" id="chceck-sztuka" type="checkbox" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">
