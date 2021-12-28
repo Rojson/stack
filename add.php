@@ -39,10 +39,27 @@
             <div class="horizontal-container nav-container__right-side">
                 <a href="index.php" class="pointer">Najnowsze</a>
                 <a href="search.php" class="pointer">Szukaj</a>
-                <a href="add.php" class="pointer nav-active">Wstaw <?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];} ?></a>
-                <span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>
+                <a href="add.php" class="pointer nav-active">Wstaw</a>
+                <?php
+                    if(isset($_SESSION['username']))
+                    { 
+                        echo '<span class="logged_user">#'.$_SESSION['username'].'</span>';
+                    }else
+                    {
+                        echo '<span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>';
+                    }
+                 ?>
+                
                 <span class="nav-sep"></span>
-                <span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>
+                <?php
+                    if(isset($_SESSION['username']))
+                    { 
+                        echo '<span id="toggle_sign" class="nav-button pointer">Wyloguj się</span>';
+                    }else
+                    {
+                        echo '<span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>';
+                    }
+                 ?>
             </div>
         </div>
     </nav>
