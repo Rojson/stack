@@ -38,8 +38,8 @@
         <div class="horizontal-container width">
             <img src="css/logo.png">
             <div class="horizontal-container nav-container__right-side">
-            <a href="index.php" class="pointer nav-active">Najnowsze</a>
-                <a href="search.php" class="pointer">Szukaj</a>
+                <a href="index.php" class="pointer">Najnowsze</a>
+                <a href="search.php" class="pointer nav-active">Szukaj</a>
                 <a href="add.php" class="pointer">Wstaw <?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];} ?></a>
                 <span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>
                 <span class="nav-sep"></span>
