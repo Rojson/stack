@@ -111,6 +111,8 @@
   width: 15px;
   display: block;
   margin-right: 10px;
+  border: none;
+  background-color: #2B3442;
 }
 
 .plus_btn:hover {

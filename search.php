@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/log.js"></script>
+    <script src="load_data_ajax.js"></script>
 </head>
 <body class="vertical-container">
     <div id="log_in" class="log_bg log_display_a">
@@ -82,7 +83,7 @@
                     </div>
                 </label>
                 <label class="search-box__row">
-                    <input id="chceck-Krajobraz" type="checkbox" class="checkbox">
+                    <input id="chceck-krajobraz" type="checkbox" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">
@@ -97,12 +98,12 @@
                         Sztuka
                     </div>
                 </label>
-
+                <button id="category_search" class="author_submit">Szukaj</button>
                 <div class="search-box__header">
                     Szukaj autora
                 </div>
-                <input type="text" class="author_input"/>
-                <button class="author_submit">Szukaj</button>
+                <input id="author_name" type="text" class="author_input"/>
+                <button id="author_search" class="author_submit">Szukaj</button>
             </span>
         </div>
         <div class="szot_container szot_container--width">
@@ -112,136 +113,50 @@
                     <span class="header__line--blue"></span>
                 </span>
             </div>
-            <div class="szot">
-                <div class="szot__nick szot--text">
-                    #noszekalosze
-                </div>
-                <div class="szot__tags horizontal-container">
-                    <div class="szot__tag szot--text">
-                        #natura
+            <div id="szot_hook" class="szot_container szot_container--width">
+                <div class="szot">
+                    <div class="szot__nick szot--text">
+                        #noszekalosze
                     </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
+                    <div class="szot__tags horizontal-container">
+                        <div class="szot__tag szot--text">
+                            #natura
+                        </div>
+                        <div class="szot__tag szot--text">
+                            #afryka
+                        </div>
+                        <div class="szot__tag szot--text">
+                            #natura
+                        </div>
+                        <div class="szot__tag szot--text">
+                            #afryka
+                        </div>
+                        <div class="szot__tag szot--text">
+                            #natura
+                        </div>
+                        <div class="szot__tag szot--text">
+                            #afryka
+                        </div>
+                        <div class="szot__tag szot--text">
+                            #natura
+                        </div>
+                        <div class="szot__tag szot--text">
+                            #afryka
+                        </div>
                     </div>
-                    <div class="szot__tag szot--text">
-                        #natura
+                    <img src="css/test.png">
+                    <div class="szot__title">
+                        Bawołek w wodzie
                     </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
+                    <div class="szot__desc">
+                        Leży se i ma wyjebane 
                     </div>
-                    <div class="szot__tag szot--text">
-                        #natura
+                    <div class="szot__like_plus horizontal-container">
+                        <div class="plus_btn"></div>22
                     </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
+                    <div class="szot__time">
+                        Wygaśnie za: 21 minut
                     </div>
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                </div>
-                <img src="css/test.png">
-                <div class="szot__title">
-                    Bawołek w wodzie
-                </div>
-                <div class="szot__desc">
-                    Leży se i ma wyjebane 
-                </div>
-                <div class="szot__like_plus horizontal-container">
-                    <div class="plus_btn"></div>22
-                </div>
-                <div class="szot__time">
-                    Wygaśnie za: 21 minut
-                </div>
-            </div>
-            <div class="szot">
-                <div class="szot__nick szot--text">
-                    #noszekalosze
-                </div>
-                <div class="szot__tags horizontal-container">
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                </div>
-                <img src="css/test.png">
-                <div class="szot__title">
-                    Bawołek w wodzie
-                </div>
-                <div class="szot__desc">
-                    Leży se i ma wyjebane 
-                </div>
-                <div class="szot__like_plus horizontal-container">
-                    <div class="plus_btn"></div>22
-                </div>
-                <div class="szot__time">
-                    Wygaśnie za: 21 minut
-                </div>
-            </div>
-            <div class="szot">
-                <div class="szot__nick szot--text">
-                    #noszekalosze
-                </div>
-                <div class="szot__tags horizontal-container">
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #natura
-                    </div>
-                    <div class="szot__tag szot--text">
-                        #afryka
-                    </div>
-                </div>
-                <img src="css/test.png">
-                <div class="szot__title">
-                    Bawołek w wodzie
-                </div>
-                <div class="szot__desc">
-                    Leży se i ma wyjebane 
-                </div>
-                <div class="szot__like_plus horizontal-container">
-                    <div class="plus_btn"></div>22
-                </div>
-                <div class="szot__time">
-                    Wygaśnie za: 21 minut
                 </div>
             </div>
         </div>

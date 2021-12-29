@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/log.js"></script>
+    <script src="load_data_ajax.js"></script>
 </head>
 <body class="vertical-container">
     <div id="log_in" class="log_bg log_display_a">
@@ -72,51 +73,8 @@
             <span class="header__line--blue"></span>
         </span>
     </div>
-    <div class="szot_container width">
-        <div class="szot">
-            <div class="szot__nick szot--text">
-                #noszekalosze
-            </div>
-            <div class="szot__tags horizontal-container">
-                <div class="szot__tag szot--text">
-                    #natura
-                </div>
-                <div class="szot__tag szot--text">
-                    #afryka
-                </div>
-                <div class="szot__tag szot--text">
-                    #natura
-                </div>
-                <div class="szot__tag szot--text">
-                    #afryka
-                </div>
-                <div class="szot__tag szot--text">
-                    #natura
-                </div>
-                <div class="szot__tag szot--text">
-                    #afryka
-                </div>
-                <div class="szot__tag szot--text">
-                    #natura
-                </div>
-                <div class="szot__tag szot--text">
-                    #afryka
-                </div>
-            </div>
-            <img src="css/test.png">
-            <div class="szot__title">
-                Bawołek w wodzie
-            </div>
-            <div class="szot__desc">
-                Leży se i ma wyjebane 
-            </div>
-            <div class="szot__like_plus horizontal-container">
-                <div class="plus_btn"></div>22
-            </div>
-            <div class="szot__time">
-                Wygaśnie za: 21 minut
-            </div>
-        </div>
+    <div id="szot_hook" class="szot_container width">
+        
     </div>
     <div class="horizontal-container footer">
         <img src="css/logo_f.png">
