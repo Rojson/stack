@@ -11,9 +11,11 @@ document.onload = new function () {
 		dataType: "json",
 		success: function (data) {
 			var tab = JSON.parse(JSON.stringify(data));
-			//console.log(tab);
+			console.log(tab);
+			tab.push("x");
 			let ikona="";
 			let ik=[];
+			
 			for (var i = 0; i < tab.length-1; i++) 
 			{
 				console.log(tab[i].nazwa_kategorii);
@@ -23,7 +25,9 @@ document.onload = new function () {
 				}else
 				{
 					ik.push(tab[i].nazwa_kategorii);
+					ik.push(tab[i].id_obrazka);
 					console.log(ik);
+					
 					ikona = ikona + '<div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container">';
 					for(var x = 0; x<ik.length; x++)
 					{
@@ -31,17 +35,19 @@ document.onload = new function () {
 					}
 
 					ikona = ikona + '</div><img src="'+tab[i].obrazek+'"><div class="szot__title">'+tab[i].tytul+'</div><div class="szot__desc">'+tab[i].opis+'</div><div class="szot__like_plus horizontal-container"><form><input type="submit" value="" class="plus_btn"></form>22</div><div class="szot__time">Ważny do: 21'+ tab[i].data_wygasniecia+'</div></div>';
+					
 					ik=[];
 				}
 				
 			}
+			
 		
-
-			//for (var i = 0; i < tab.length; i++) 
-			//{
-		//		ikona = ikona + '<div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container"><div class="szot__tag szot--text">#'+tab[i].nazwa_kategorii+'</div></div><img src="'+tab[i].obrazek+'"><div class="szot__title">'+tab[i].tytul+'</div><div class="szot__desc">'+tab[i].opis+'</div><div class="szot__like_plus horizontal-container"><div class="plus_btn"></div>22</div><div class="szot__time">Ważny do: 21'+ tab[i].data_wygasniecia+'</div></div>';
-	///		}
-
+			/*
+			for (var i = 0; i < tab.length; i++) 
+			{
+				ikona = ikona + '<div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container"><div class="szot__tag szot--text">#'+tab[i].nazwa_kategorii+'</div></div><img src="'+tab[i].obrazek+'"><div class="szot__title">'+tab[i].tytul+'</div><div class="szot__desc">'+tab[i].opis+'</div><div class="szot__like_plus horizontal-container"><form><input type="submit" value="" class="plus_btn"></form>22</div><div class="szot__time">Ważny do: 21'+ tab[i].data_wygasniecia+'</div></div>';
+			}
+			*/
 			document.getElementById("szot_hook").innerHTML = ikona;
 		}
 		
@@ -59,18 +65,18 @@ document.onload = new function () {
 		});
 
 		$("#category_search").click(function() {
-			var chceck_przygodowa = document.getElementById("chceck-smieszne");
-			var chceck_kryminal = document.getElementById("chceck-krajobraz");
-			var chceck_akcji = document.getElementById("chceck-sztuka");
+			var chceck_smieszne = document.getElementById("chceck-smieszne");
+			var chceck_krajobraz = document.getElementById("chceck-krajobraz");
+			var chceck_sztuka = document.getElementById("chceck-sztuka");
 	
 			query = "SELECT * FROM obrazki join uzytkownicy using(id_uzytkownika) join obrazek_kategorie USING(id_obrazka) join kategorie USING(id_kategorii)";
 			var ifchceck=0;
-			if (chceck_przygodowa.checked == true)
+			if (chceck_smieszne.checked == true)
 			{
 				query += "WHERE (id_kategorii = 1";
 				ifchceck =1;
 			}
-			if (chceck_kryminal.checked == true)
+			if (chceck_krajobraz.checked == true)
 			{
 				if(ifchceck==1)
 				{
@@ -81,7 +87,7 @@ document.onload = new function () {
 					ifchceck=1;
 				}
 			}
-			if (chceck_akcji.checked == true)
+			if (chceck_sztuka.checked == true)
 			{
 				if(ifchceck==1)
 				{
