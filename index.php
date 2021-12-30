@@ -14,7 +14,10 @@
     <script src="load_data_ajax.js"></script>
 </head>
 <body class="vertical-container">
-    <div id="log_in" class="log_bg log_display_a">
+    <?php
+        require("registration.php");
+    ?>
+    <!-- <div id="log_in" class="log_bg log_display_a">
         <form method="POST" action="" class="vertical-container box">
             <img src="css/logo_f.png">
             <input type="text" name="login" placeholder="Login">
@@ -31,9 +34,9 @@
                 <input type="password" placeholder="Powtórz hasło">
                 <input type="submit" value="Utwórz konto">
         </form>
-    </div>
+    </div> -->
     <?php
-        require("registration.php");
+        
         require("like.php");
     ?>
     <nav class="nav fixed-top container-fluid">

@@ -13,7 +13,10 @@
     <script src="js/log.js"></script>
 </head>
 <body class="vertical-container">
-    <div id="log_in" class="log_bg log_display_a">
+<?php
+        require("registration.php");
+    ?>
+    <!-- <div id="log_in" class="log_bg log_display_a">
         <form method="POST" action="" class="vertical-container box">
             <img src="css/logo_f.png">
             <input type="text" name="login" placeholder="Login">
@@ -30,10 +33,8 @@
                 <input type="password" placeholder="Powtórz hasło">
                 <input type="submit" value="Utwórz konto">
         </form>
-    </div>
-    <?php
-        require("registration.php");
-    ?>
+    </div> -->
+
     <nav class="nav fixed-top container-fluid">
         <div class="horizontal-container width">
             <img src="css/logo.png">
@@ -71,7 +72,7 @@
             <span class="header__line--blue"></span>
         </span>
     </div>
-    <form class="width row" action="upload.php" method="POST" enctype="multipart/form-data">
+    <form id="upload_form" class="width row" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
         <div class="col-sm-3 col">
                 <span>Tytuł</span>
                 <input id="tytul" type="text" name="title" />
@@ -86,7 +87,7 @@
                     <option value="60">godzina</option>
                 </select>
                 <div id="file_hook" class="fileUpload">
-                    <input id="image" type="file" class="upload" />
+                    <input name="image" id="image" type="file" class="upload" />
                     <span>Plik</span>
                 </div>
                 <input type="submit" name="submit" value="Dodaj szota" class="submit">

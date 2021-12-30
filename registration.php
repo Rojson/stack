@@ -30,12 +30,35 @@
             }
             else
             {
-                echo "Podany login już istnieje";
+                echo "<div id='sign_in' class='log_bg log_display_b'>
+                <form method='POST' action='' class='vertical-container box'>
+                    <img src='css/logo_f.png'>
+                        <input type='hidden' name='reg' value='reg'>
+                        <input type='text' name='login' placeholder='Login już istnieje!'>
+                        <input type='password' name='password' placeholder='Hasło'>
+                        <input type='password' placeholder='Powtórz hasło'>
+                        <input type='submit' value='Utwórz konto'>
+                </form>
+            </div>";
             }
 
         }
     }
-    else
+    else{
+        echo "<div id='sign_in' class='log_bg log_display_a'>
+        <form method='POST' action='' class='vertical-container box'>
+            <img src='css/logo_f.png'>
+                <input type='hidden' name='reg' value='reg'>
+                <input type='text' name='login' placeholder='Podaj swój login'>
+                <input type='password' name='password' placeholder='Hasło'>
+                <input type='password' placeholder='Powtórz hasło'>
+                <input type='submit' value='Utwórz konto'>
+        </form>
+    </div>";
+    }
+
+
+    if(isset($_REQUEST['log']))
     {
         if(isset($_REQUEST['login']))
         {
@@ -60,9 +83,28 @@
             }
             else
             {
-                echo "błędny login lub hasło";
+                echo "<div id='log_in' class='log_bg log_display_b'>
+                <form method='POST' action='' class='vertical-container box'>
+                    <img src='css/logo_f.png'>
+                    <input type='hidden' name='log' value='log'>
+                    <input type='text' name='login' placeholder='Błędny login'>
+                    <input type='password' name='password' placeholder='Błędne hasło'>
+                    <input type='submit' value='Zaloguj się'>
+                </form>
+            </div>";
             }
         }
+    }
+    else{
+        echo "<div id='log_in' class='log_bg log_display_a'>
+                <form method='POST' action='' class='vertical-container box'>
+                    <img src='css/logo_f.png'>
+                    <input type='hidden' name='log' value='log'>
+                    <input type='text' name='login' placeholder='Login'>
+                    <input type='password' name='password' placeholder='Haslo'>
+                    <input type='submit' value='Zaloguj się'>
+                </form>
+            </div>";
     }
 
     if(isset($_SESSION['username'])){
