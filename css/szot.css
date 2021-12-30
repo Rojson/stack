@@ -33,6 +33,10 @@
   padding: 10px;
 }
 
+.szot img {
+  overflow: hidden;
+}
+
 .szot--text {
   font-style: normal;
   font-weight: normal;

@@ -74,7 +74,7 @@
     <form class="width row" action="upload.php" method="POST" enctype="multipart/form-data">
         <div class="col-sm-3 col">
                 <span>Tytuł</span>
-                <input type="text" name="title" />
+                <input id="tytul" type="text" name="title" />
                 <span>Opis</span>
                 <textarea name="description"></textarea>
         </div>
@@ -85,7 +85,10 @@
                     <option value="45">45 minut</option>
                     <option value="60">godzina</option>
                 </select>
-                <input type="file" name="image" id="image">
+                <div id="file_hook" class="fileUpload">
+                    <input id="image" type="file" class="upload" />
+                    <span>Plik</span>
+                </div>
                 <input type="submit" name="submit" value="Dodaj szota" class="submit">
         </div>
         <div class="col-sm-3 col">

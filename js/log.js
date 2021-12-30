@@ -7,4 +7,9 @@ $(document).ready(function(){
     $( "#toggle_sign" ).click(function() {
         $( "#sign_in" ).toggleClass("log_display_a log_display_b")
     });
+
+    $( "#file_hook" ).click(function() {
+
+        $( "#file_hook" ).toggleClass("fileUpload fileUpload2")
+    });
 });
