@@ -122,6 +122,7 @@
                     {
                         echo "Kategorie są wymagane!";
                     }
+                    $conn ->close();
                     header("Location: index.php");
                 }
                 else
@@ -141,5 +142,4 @@
     {
         echo "Zaloguj się!";
     }
-
 ?>

@@ -35,6 +35,7 @@
     </div>
     <?php
         require("registration.php");
+        require("like.php");
     ?>
     <nav class="nav fixed-top container-fluid">
         <div class="horizontal-container width">

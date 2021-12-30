@@ -91,11 +91,11 @@
         <div class="col-sm-3 col">
                 Wybierz kategorie
                 <label class="search-box__row">
-                    <input name="category[]" id="chceck-smieszne" value="Śmieszne" type="checkbox" class="checkbox">
+                    <input name="category[]" id="chceck-smieszne" value="Zabawne" type="checkbox" class="checkbox">
                     <div class="search-box__checkbox">
                     </div> 
                     <div class="search-box__text">
-                        Śmieszne
+                        Zabawne
                     </div>
                 </label>
                 <label class="search-box__row">
