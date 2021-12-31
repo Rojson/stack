@@ -1,14 +1,11 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $db = "stack";
+    $config = include('config.php');
+    $host=$config['hostname'];
+    $username = $config['username'];
+    $password = $config['password'];
+    $dbname=$config['database'];
 
-    $conn = new mysqli($servername,$username,$password,$db);
-    if($conn->connect_error)
-    {
-        die("Połączenie nie powiodło się: ".$conn->connect_error);
-    }
+    $conn= new mysqli($host,$username,$password,$dbname);
 
     function add_logs($client, $mysqli)
     {

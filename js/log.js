@@ -41,3 +41,28 @@ console.log(kat1);
     }
     return true;
   }
+
+  function validateForm_reg() {
+    let login = document.forms["reg_form"]["login"].value;
+    let pass1 = document.forms["reg_form"]["password"].value;
+    let pass2 = document.forms["reg_form"]["password_2"].value;
+console.log(login);
+    if (login == "") {
+      alert("Pole login musi mieć wartość");
+      return false;
+    }
+    if (pass1 == "") {
+        alert("Pole hasło musi mieć wartość");
+        return false;
+    }
+    if (pass2 == "") {
+        alert("Powtórz hasło");
+        return false;
+    }
+    if (pass2 != pass1) {
+        alert("Hasła nie są identyczne");
+        return false;
+    }
+
+    return true;
+  }
