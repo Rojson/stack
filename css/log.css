@@ -76,6 +76,18 @@
   color: #FFFFFF;
 }
 
+.box .input_error {
+  background-color: white;
+  border: 2px solid #E66767;
+  color: #2B3442;
+}
+
+.box span {
+  color: #E66767;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
 .logged_user {
   font-style: normal;
   font-weight: normal;
