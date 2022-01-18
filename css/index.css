@@ -1,5 +1,5 @@
 .width {
-  width: 1200px;
+  max-width: 1200px;
 }
 
 .header {
@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   border-radius: 1px;
-  width: 80%;
+  width: 70%;
   height: 5px;
 }
 
@@ -41,5 +41,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .header__line {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

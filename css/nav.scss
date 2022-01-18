@@ -91,3 +91,50 @@ $blue:#6E97FE;
     margin-top: 40px;
     justify-content: center;
 }
+.btn-close
+{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .horizontal-container
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-container__right-side
+    {
+        flex-direction: column;
+    }
+    .nav
+    {
+        height: 100%;
+        img
+        {
+            margin-bottom: 20px;
+        }
+    }
+    .nav2
+    {
+        display: flex;
+        height: 60px;
+        padding: auto;
+        background-color: $primary_color;
+        justify-content: flex-start;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        img
+        {
+            margin-bottom: 0px;
+        }
+    }
+    .btn-close
+    {
+        display: block;
+    }
+    .btn-close2
+    {
+        display: none;
+    }
+}

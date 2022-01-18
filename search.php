@@ -40,13 +40,13 @@
 
         require("like.php");
     ?>
-    <nav class="nav fixed-top container-fluid">
+    <nav id="nav-hook" class="nav fixed-top container-fluid">
         <div class="horizontal-container width">
             <img src="css/logo.png">
-            <div class="horizontal-container nav-container__right-side">
+            <div id="menu-hook" class="horizontal-container nav-container__right-side">
                 <a href="index.php" class="pointer">Najnowsze</a>
                 <a href="search.php" class="pointer nav-active">Szukaj</a>
-                <a href="add.php" class="pointer">Wstaw</a>
+                <a href="add.php" class="pointer">Wstaw </a>
                 <?php
                     if(isset($_SESSION['username']))
                     { 
@@ -56,7 +56,6 @@
                         echo '<span id="toggle_log" class="nav-button nav-button__first-button pointer">Zaloguj się</span>';
                     }
                  ?>
-                
                 <span class="nav-sep"></span>
                 <?php
                     if(isset($_SESSION['username']))
@@ -69,8 +68,10 @@
                         echo '<span id="toggle_sign" class="nav-button pointer">Zarejestruj się</span>';
                     }
                  ?>
+                 
             </div>
         </div>
+        <button id="close-menu" type="button" class="btn-close" aria-label="Close"></button>
     </nav>
     <div class="szot_container width horizontal-container margin">
         <div class="search_container">
