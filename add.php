@@ -35,10 +35,10 @@
         </form>
     </div> -->
 
-    <nav class="nav fixed-top container-fluid">
+    <nav id="nav-hook" class="nav fixed-top container-fluid">
         <div class="horizontal-container width">
             <img src="css/logo.png">
-            <div class="horizontal-container nav-container__right-side">
+            <div id="menu-hook" class="horizontal-container nav-container__right-side">
                 <a href="index.php" class="pointer">Najnowsze</a>
                 <a href="search.php" class="pointer">Szukaj</a>
                 <a href="add.php" class="pointer nav-active">Wstaw</a>
@@ -65,6 +65,7 @@
                  ?>
             </div>
         </div>
+        <button id="close-menu" type="button" class="btn-close" aria-label="Close"></button>
     </nav>
     <div class="header width horizontal-container">
         <span>Wstaw szota</span>
@@ -72,7 +73,7 @@
             <span class="header__line--blue"></span>
         </span>
     </div>
-    <form id="upload_form" class="width row" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+    <form id="upload_form" class=" row" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
         <div class="col-sm-3 col">
                 <span>Tytuł</span>
                 <input id="tytul" type="text" name="title" />
