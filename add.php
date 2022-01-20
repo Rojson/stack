@@ -86,9 +86,9 @@
                     <option value="45">45 minut</option>
                     <option value="60">godzina</option>
                 </select>
-                <div id="file_hook" class="fileUpload" data-toggle="tooltip" title="Wybierz swoje zdjęcie">
+                <div id="file_hook" class="fileUpload">
                     <input name="image" id="image" type="file" class="upload" />
-                    <span >Plik</span>
+                    <span>Plik</span>
                 </div>
                 <input type="submit" name="submit" value="Dodaj szota" class="submit">
         </div>

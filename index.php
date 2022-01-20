@@ -39,10 +39,10 @@
         
         require("like.php");
     ?>
-    <nav id="nav-hook" class="nav fixed-top container-fluid">
+    <nav class="nav fixed-top container-fluid">
         <div class="horizontal-container width">
             <img src="css/logo.png">
-            <div id="menu-hook" class="horizontal-container nav-container__right-side">
+            <div class="horizontal-container nav-container__right-side">
                 <a href="index.php" class="pointer nav-active">Najnowsze</a>
                 <a href="search.php" class="pointer">Szukaj</a>
                 <a href="add.php" class="pointer">Wstaw </a>
@@ -70,15 +70,14 @@
                  
             </div>
         </div>
-        <button id="close-menu" type="button" class="btn-close" aria-label="Close"></button>
     </nav>
-    <div class="header width horizontal-container container-fluid">
+    <div class="header width horizontal-container">
         <span>Najnowsze szoty</span>
         <span class="header__line">
             <span class="header__line--blue"></span>
         </span>
     </div>
-    <div id="szot_hook" class="szot_container width container-fluid">
+    <div id="szot_hook" class="szot_container width">
         
     </div>
     <div class="horizontal-container footer">

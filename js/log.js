@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-
     $( "#toggle_log" ).click(function() {
         $( "#log_in" ).toggleClass("log_display_a log_display_b")
         console.log("ss")
@@ -13,12 +11,6 @@ $(document).ready(function(){
     $( "#file_hook" ).click(function() {
 
         $( "#file_hook" ).toggleClass("fileUpload fileUpload2")
-    });
-
-    $( "#close-menu" ).click(function() {
-
-        $( "#menu-hook" ).toggleClass("btn-close btn-close2")
-        $( "#nav-hook" ).toggleClass("nav nav2")
     });
 
     

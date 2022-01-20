@@ -12,7 +12,6 @@
           align-items: flex-start;
   gap: 75px;
   margin-top: 20px;
-  padding: 0px !important;
 }
 
 .szot {
@@ -125,14 +124,5 @@
   background-image: url("Vector2.png");
   -webkit-transition: 150ms;
   transition: 150ms;
-}
-
-@media only screen and (max-width: 800px) {
-  .szot {
-    width: 100%;
-  }
-  .szot_container {
-    padding: 5px;
-  }
 }
 /*# sourceMappingURL=szot.css.map */

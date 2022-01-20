@@ -10,7 +10,6 @@ $blue:#6E97FE;
     align-items: flex-start;
     gap: 75px;
     margin-top: 20px;
-    padding: 0px !important;
 }
 .szot
 {
@@ -110,14 +109,3 @@ $blue:#6E97FE;
     background-image: url("Vector2.png");
     transition: 150ms;
 }
-@media only screen and (max-width: 800px) {
-    .szot
-    {
-        width: 100%-10px;
-    }
-    .szot_container
-    {
-        padding: 5px !important;
-        box-sizing: border-box;
-    }
-  }
