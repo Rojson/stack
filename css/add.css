@@ -56,25 +56,6 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 20px;
-  width: 1200px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .row {
-    width: 100%;
-  }
-  .width {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 .col {

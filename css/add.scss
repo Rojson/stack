@@ -46,24 +46,6 @@ $blue:#6E97FE;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 20px;
-    width: 1200px;
-}
-@media only screen and (max-width: 1200px) {
-    .row
-    {
-        width: 100%;
-    }
-    .width
-    {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .row
-    {
-        flex-direction: column;
-    }
 }
 .col
 {
