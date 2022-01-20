@@ -6,12 +6,6 @@
   z-index: 1;
 }
 
-.navbar {
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
-}
-
 /*
 .horizontal-container
 {
@@ -112,9 +106,5 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-button {
-  z-index: 100000;
 }
 /*# sourceMappingURL=nav.css.map */
