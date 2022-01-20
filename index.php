@@ -15,7 +15,7 @@
     <script src="js/log.js"></script>
     <script src="load_data_ajax.js"></script>
 </head>
-<body class="bg container">
+<body class="bg">
     <?php
         require("registration.php");
     ?>
@@ -62,18 +62,24 @@
 
     </nav>
     
+    <div class="container-lg">
+        <div class="header row align-items-center">
+            <span class="col-sm-3">Najnowsze szoty</span>
+            <span class="col-sm-9 header__line">
+                <span class="header__line--blue"></span>
+            </span>
+        </div>
+    </div>
 
-    <div class="header width horizontal-container">
-        <span>Najnowsze szoty</span>
-        <span class="header__line">
-            <span class="header__line--blue"></span>
-        </span>
+    <div class="container-lg">
+        <div id="szot_hook" class="szot_container row gx-5">
+            
+        </div>
     </div>
-    <div id="szot_hook" class="szot_container width">
-        
-    </div>
+
+
     <div class="horizontal-container footer">
-        <img src="css/logo_f.png">
+        <img  src="css/logo_f.png">
     </div>
 
 </body>

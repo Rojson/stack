@@ -53,7 +53,7 @@ document.onload = new function () {
 					//ik.push(tab[i].id_obrazka);
 					//console.log(ik);
 					
-					ikona = ikona + '<div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container">';
+					ikona = ikona + '<div class=" col-md-4"><div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container">';
 					for(var x = 0; x<ik.length; x++)
 					{
 						ikona = ikona + '<div class="szot__tag szot--text">#'+ik[x]+'</div>';
@@ -62,7 +62,7 @@ document.onload = new function () {
 					ikona = ikona + '</div><img src="'+tab[i].obrazek+'"><div class="szot__title">'+tab[i].tytul+'</div><div class="szot__desc">'+tab[i].opis+'</div><div class="szot__like_plus horizontal-container"><form method="POST" action=""><input type="hidden" name="image" value="'+tab[i].obrazek+'"><input type="submit" name="submit" value="" class="plus_btn"></form>';
 					ikona = ikona + '<div id="szot_id_'+tab[i].id_obrazka+'"></div>';
 					
-					ikona = ikona + '</div><div class="szot__time">Minuty do wygaśnięcia: '+ tab[i].zostalo+'</div></div>';
+					ikona = ikona + '</div><div class="szot__time">Minuty do wygaśnięcia: '+ tab[i].zostalo+'</div></div></div>';
 					
 					ik=[];
 				}
