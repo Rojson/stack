@@ -1,31 +1,29 @@
 .nav {
-  height: 60px;
-  padding: auto;
+  min-height: 60px;
   background-color: #2B3442;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 
-.horizontal-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.navbar {
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
 }
 
-.width {
-  width: 1200px;
+/*
+.horizontal-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
+.width
+{
+    width: 1200px;
+}
+*/
 .nav-container__right-side {
   gap: 20px;
   font-style: normal;
@@ -114,5 +112,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+button {
+  z-index: 100000;
 }
 /*# sourceMappingURL=nav.css.map */
