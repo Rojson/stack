@@ -6,6 +6,7 @@
     <link rel='stylesheet' href="css/add.css">
     <link rel='stylesheet' href="css/szot.css">
     <link rel='stylesheet' href="css/log.css">
+    <link rel='stylesheet' href="css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -14,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/log.js"></script>
 </head>
-<body class="vertical-container">
+<body class="bg">
 <?php
         require("registration.php");
     ?>
@@ -83,54 +84,56 @@
             </div>
         </div>
     </div>
-    <form id="upload_form" class="width row" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
-        <div class="col-sm-3 col">
-                <span>Tytuł</span>
-                <input id="tytul" type="text" name="title" />
-                <span>Opis</span>
-                <textarea name="description"></textarea>
-        </div>
-        <div class="col-sm-3 col">
-                Czas do wygaśnięcia
-                <select name="expire">
-                    <option value="30">30 minut</option>
-                    <option value="45">45 minut</option>
-                    <option value="60">godzina</option>
-                </select>
-                <div id="file_hook" class="fileUpload">
-                    <input name="image" id="image" type="file" class="upload" />
-                    <span>Plik</span>
-                </div>
-                <input type="submit" name="submit" value="Dodaj szota" class="submit">
-        </div>
-        <div class="col-sm-3 col">
-                Wybierz kategorie
-                <label class="search-box__row">
-                    <input name="category[]" id="chceck-smieszne" value="Zabawne" type="checkbox" class="checkbox">
-                    <div class="search-box__checkbox">
-                    </div> 
-                    <div class="search-box__text">
-                        Zabawne
+    <div class="container-lg">
+        <form id="upload_form" class="row" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <div class="col-sm-6 col-md-4 cols">
+                    <span>Tytuł</span>
+                    <input id="tytul" type="text" name="title" />
+                    <span>Opis</span>
+                    <textarea name="description"></textarea>
+            </div>
+            <div class="col-sm-6 col-md-4 cols">
+                    Czas do wygaśnięcia
+                    <select name="expire">
+                        <option value="30">30 minut</option>
+                        <option value="45">45 minut</option>
+                        <option value="60">godzina</option>
+                    </select>
+                    <div id="file_hook" class="fileUpload">
+                        <input name="image" id="image" type="file" class="upload" />
+                        <span>Plik</span>
                     </div>
-                </label>
-                <label class="search-box__row">
-                    <input name="category[]" id="chceck-Krajobraz" value="Krajobraz" type="checkbox" class="checkbox">
-                    <div class="search-box__checkbox">
-                    </div> 
-                    <div class="search-box__text">
-                        Krajobraz
-                    </div>
-                </label>
-                <label class="search-box__row">
-                    <input name="category[]" id="chceck-sztuka" type="checkbox" value="Sztuka" class="checkbox">
-                    <div class="search-box__checkbox">
-                    </div> 
-                    <div class="search-box__text">
-                        Sztuka
-                    </div>
-                </label>
-        </div>
-    </form>
+                    <input type="submit" name="submit" value="Dodaj szota" class="submit">
+            </div>
+            <div class="col-sm-6 col-md-4 cols">
+                    Wybierz kategorie
+                    <label class="search-box__row">
+                        <input name="category[]" id="chceck-smieszne" value="Zabawne" type="checkbox" class="checkbox">
+                        <div class="search-box__checkbox">
+                        </div> 
+                        <div class="search-box__text">
+                            Zabawne
+                        </div>
+                    </label>
+                    <label class="search-box__row">
+                        <input name="category[]" id="chceck-Krajobraz" value="Krajobraz" type="checkbox" class="checkbox">
+                        <div class="search-box__checkbox">
+                        </div> 
+                        <div class="search-box__text">
+                            Krajobraz
+                        </div>
+                    </label>
+                    <label class="search-box__row">
+                        <input name="category[]" id="chceck-sztuka" type="checkbox" value="Sztuka" class="checkbox">
+                        <div class="search-box__checkbox">
+                        </div> 
+                        <div class="search-box__text">
+                            Sztuka
+                        </div>
+                    </label>
+            </div>
+        </form>
+    </div>
     <div class="horizontal-container footer">
         <img src="css/logo_f.png">
     </div>

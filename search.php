@@ -88,6 +88,7 @@
                     <div class="search-box__header">
                         Wybierz kategorie
                     </div>
+                    
                     <label class="search-box__row">
                         <input id="chceck-smieszne" type="checkbox" class="checkbox">
                         <div class="search-box__checkbox">

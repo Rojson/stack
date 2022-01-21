@@ -1,84 +1,16 @@
-.width {
-  width: 1200px;
-}
-
-.header {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 0.01em;
-  color: #FFFFFF;
-  margin-top: 90px;
-}
-
-.header__line {
-  background: #2B3442;
-  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 1px;
-  width: 80%;
-  height: 5px;
-}
-
-.header__line--blue {
-  background-color: #6E97FE;
-  height: 5px;
-  width: 50px;
-  display: block;
-  border-radius: 1px;
-}
-
-.vertical-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #252D3A;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   padding-top: 20px;
 }
 
-.col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 0px !important;
+.cols {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
-  display: flex;
   color: #8395A7;
   gap: 10px;
 }
 
-.col input {
+.cols input {
   border: 2px solid rgba(131, 149, 167, 0.35);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -88,7 +20,7 @@
   height: 40px;
 }
 
-.col textarea {
+.cols textarea {
   border: 2px solid rgba(131, 149, 167, 0.35);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -100,12 +32,12 @@
   padding: 5px;
 }
 
-.col #tytul {
+.cols #tytul {
   color: #8395A7 !important;
   padding: 5px;
 }
 
-.col #image {
+.cols #image {
   background-color: #6E97FE;
   content: "";
   background: none;
