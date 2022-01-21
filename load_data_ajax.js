@@ -52,8 +52,17 @@ document.onload = new function () {
 					ik.push(tab[i].nazwa_kategorii);
 					//ik.push(tab[i].id_obrazka);
 					//console.log(ik);
+					var path = window.location.pathname;
+					var page = path.split("/").pop();
+					console.log( page );
+					if(page == "search.php")
+					{
+						ikona = ikona + '<div class=" col-sm-6 col-lg-6"><div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container">';
+					}else
+					{
+						ikona = ikona + '<div class=" col-sm-6 col-lg-4"><div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container">';
+					}
 					
-					ikona = ikona + '<div class=" col-md-4"><div class="szot"><div class="szot__nick szot--text">#' + tab[i].login +'</div><div class="szot__tags horizontal-container">';
 					for(var x = 0; x<ik.length; x++)
 					{
 						ikona = ikona + '<div class="szot__tag szot--text">#'+ik[x]+'</div>';

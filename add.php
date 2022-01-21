@@ -75,11 +75,13 @@
             </div>
 
     </nav>
-    <div class="header width horizontal-container">
-        <span>Wstaw szota</span>
-        <span class="header__line">
-            <span class="header__line--blue"></span>
-        </span>
+    <div class="container-lg">
+        <div class="header row align-items-center">
+            <span class="col-sm-3">Dodaj szota</span>
+            <div class="col-sm-9">
+                <div class="header__line"></div>
+            </div>
+        </div>
     </div>
     <form id="upload_form" class="width row" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
         <div class="col-sm-3 col">

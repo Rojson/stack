@@ -16,7 +16,7 @@
     <script src="js/log.js"></script>
     <script src="load_data_ajax.js"></script>
 </head>
-<body class="vertical-container">
+<body class="bg">
 <?php
         require("registration.php");
     ?>
@@ -80,56 +80,64 @@
             </div>
 
     </nav>
-    <div class="szot_container width horizontal-container margin">
-        <div class="search_container">
-            <span>
-                <div class="search-box__header">
-                    Wybierz kategorie
+
+    <div class="container-lg margin">
+        <div class="szot_container row margin">
+            <div class="search_container col-lg-4">
+                <div class="container-lg">
+                    <div class="search-box__header">
+                        Wybierz kategorie
+                    </div>
+                    <label class="search-box__row">
+                        <input id="chceck-smieszne" type="checkbox" class="checkbox">
+                        <div class="search-box__checkbox">
+                        </div> 
+                        <div class="search-box__text">
+                            Zabawne
+                        </div>
+                    </label>
+                    <label class="search-box__row">
+                        <input id="chceck-krajobraz" type="checkbox" class="checkbox">
+                        <div class="search-box__checkbox">
+                        </div> 
+                        <div class="search-box__text">
+                            Krajobraz
+                        </div>
+                    </label>
+                    <label class="search-box__row">
+                        <input id="chceck-sztuka" type="checkbox" class="checkbox">
+                        <div class="search-box__checkbox">
+                        </div> 
+                        <div class="search-box__text">
+                            Sztuka
+                        </div>
+                    </label>
+                    <button id="category_search" class="author_submit">Szukaj</button>
+                    <div class="search-box__header">
+                        Szukaj autora
+                    </div>
+                    <input id="author_name" type="text" class="author_input"/>
+                    <button id="author_search" class="author_submit">Szukaj</button>
                 </div>
-                <label class="search-box__row">
-                    <input id="chceck-smieszne" type="checkbox" class="checkbox">
-                    <div class="search-box__checkbox">
-                    </div> 
-                    <div class="search-box__text">
-                        Zabawne
-                    </div>
-                </label>
-                <label class="search-box__row">
-                    <input id="chceck-krajobraz" type="checkbox" class="checkbox">
-                    <div class="search-box__checkbox">
-                    </div> 
-                    <div class="search-box__text">
-                        Krajobraz
-                    </div>
-                </label>
-                <label class="search-box__row">
-                    <input id="chceck-sztuka" type="checkbox" class="checkbox">
-                    <div class="search-box__checkbox">
-                    </div> 
-                    <div class="search-box__text">
-                        Sztuka
-                    </div>
-                </label>
-                <button id="category_search" class="author_submit">Szukaj</button>
-                <div class="search-box__header">
-                    Szukaj autora
-                </div>
-                <input id="author_name" type="text" class="author_input"/>
-                <button id="author_search" class="author_submit">Szukaj</button>
-            </span>
-        </div>
-        <div class="szot_container szot_container--width">
-            <div class="header width horizontal-container">
-                <span>Wyszukane szoty</span>
-                <span class="header__line">
-                    <span class="header__line--blue"></span>
-                </span>
             </div>
-            <div id="szot_hook" class="szot_container szot_container--width">
-                
+            <div class="szot_container row col-lg-8">
+                <div class="container-lg">
+                    <div class="header row align-items-center">
+                        <span class="col-sm-4">Wyszukane szoty</span>
+                        <div class="col-sm-8">
+                            <div class="header__line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-lg">
+                    <div id="szot_hook" class="row szot_container">
+                            
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="horizontal-container footer">
         <img src="css/logo_f.png">
     </div>

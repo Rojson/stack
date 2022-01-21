@@ -65,14 +65,14 @@
     <div class="container-lg">
         <div class="header row align-items-center">
             <span class="col-sm-3">Najnowsze szoty</span>
-            <span class="col-sm-9 header__line">
-                <span class="header__line--blue"></span>
-            </span>
+            <div class="col-sm-9">
+                <div class="header__line"></div>
+            </div>
         </div>
     </div>
 
     <div class="container-lg">
-        <div id="szot_hook" class="szot_container row gx-5">
+        <div id="szot_hook" class="szot_container row">
             
         </div>
     </div>
