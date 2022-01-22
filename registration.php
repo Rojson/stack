@@ -32,7 +32,8 @@
             {
                 echo "<div id='sign_in' class='log_bg log_display_b'>
                 <form id='reg_form' method='POST' action='' class='vertical-container box'  onsubmit='return validateForm_reg()'>
-                <img src='css/logo_f.png'>
+                    <div id='toggle_sign_btn' class='x'></div>
+                    <img src='css/logo_f.png'>
                     <input type='hidden' name='reg' value='reg'>
                     <input type='text' class='input_error' name='login' placeholder='Podaj swój login'>
                     <input type='password' class='input_error' name='password' placeholder='Hasło'>
@@ -49,6 +50,7 @@
         echo "<div id='sign_in' class='log_bg log_display_a'>
         <form id='reg_form' method='POST' action='' class='vertical-container box' onsubmit='return validateForm_reg()'>
             <img src='css/logo_f.png'>
+                <div id='toggle_sign_btn' class='x'></div>
                 <input type='hidden' name='reg' value='reg'>
                 <input type='text' name='login' placeholder='Podaj swój login'>
                 <input type='password' name='password' placeholder='Hasło'>
@@ -86,6 +88,7 @@
             {
                 echo "<div id='log_in' class='log_bg log_display_b'>
                 <form method='POST' action='' class='vertical-container box'>
+                    <div id='toggle_log_btn' class='x'></div>
                     <img src='css/logo_f.png'>
                     <input type='hidden' name='log' value='log'>
                     <input type='text' class='input_error' name='login' placeholder='Login'>
@@ -100,6 +103,7 @@
     else{
         echo "<div id='log_in' class='log_bg log_display_a'>
                 <form method='POST' action='' class='vertical-container box'>
+                    <div id='toggle_log_btn' class='x'></div>
                     <img src='css/logo_f.png'>
                     <input type='hidden' name='log' value='log'>
                     <input type='text' name='login' placeholder='Login'>

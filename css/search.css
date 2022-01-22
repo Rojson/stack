@@ -184,12 +184,13 @@
   transition: 100ms all ease-in-out;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 200ms all ease-in-out;
+  transition: 200ms all ease-in-out;
 }
 
 .author_submit:hover {
   color: #6E97FE;
   background-color: #FFFFFF;
-  border: 3px solid #6E97FE;
   -webkit-transition: 200ms all ease-in-out;
   transition: 200ms all ease-in-out;
 }

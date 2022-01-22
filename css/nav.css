@@ -72,6 +72,8 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.01em;
+  -webkit-transition: ease 250ms;
+  transition: ease 250ms;
 }
 
 .nav-button__first-button {
@@ -94,6 +96,18 @@
 
 .nav-active {
   border-bottom: 2px solid #6E97FE;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-container__right-side {
+    margin-top: 20px;
+  }
+  .nav-button__first-button {
+    margin-left: 0px;
+  }
+  .nav-sep {
+    display: none;
+  }
 }
 
 .footer {

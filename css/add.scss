@@ -69,8 +69,13 @@ select:active
     background-color: $blue !important;
     color: #FFFFFF;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 20px;
+    transition: 200ms all ease-in-out;
+}
+.submit:hover
+{
+    color: $blue;
+    background-color: white !important;
 }
 .checkbox
 {

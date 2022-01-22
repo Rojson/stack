@@ -16,27 +16,10 @@
     <script src="js/log.js"></script>
 </head>
 <body class="bg">
-<?php
+    <?php
         require("registration.php");
+        require("like.php");
     ?>
-    <!-- <div id="log_in" class="log_bg log_display_a">
-        <form method="POST" action="" class="vertical-container box">
-            <img src="css/logo_f.png">
-            <input type="text" name="login" placeholder="Login">
-            <input type="password" name="password" placeholder="Hasło">
-            <input type="submit" value="Zaloguj się">
-        </form>
-    </div>
-    <div id="sign_in" class="log_bg log_display_a">
-        <form method="POST" action="" class="vertical-container box">
-            <img src="css/logo_f.png">
-                <input type="hidden" name="reg" value="reg">
-                <input type="text" name="login" placeholder="Podaj swój login">
-                <input type="password" name="password" placeholder="Hasło">
-                <input type="password" placeholder="Powtórz hasło">
-                <input type="submit" value="Utwórz konto">
-        </form>
-    </div> -->
 
     <nav class="navbar nav navbar-expand-md fixed-top container-fluid navbar-dark">
             <img src="css/logo.png">
@@ -84,6 +67,7 @@
             </div>
         </div>
     </div>
+
     <div class="container-lg">
         <form id="upload_form" class="row" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
             <div class="col-sm-6 col-md-4 cols">

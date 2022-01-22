@@ -161,12 +161,12 @@ $blue:#6E97FE;
     color: #FFFFFF;
     transition: 100ms all ease-in-out;
     box-sizing: border-box;
+    transition: 200ms all ease-in-out;
 }
 .author_submit:hover
 {
     color: $blue;
     background-color: #FFFFFF;
-    border: 3px solid $blue;
     transition: 200ms all ease-in-out;
 }
 .header

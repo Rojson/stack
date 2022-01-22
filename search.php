@@ -20,24 +20,7 @@
 <?php
         require("registration.php");
     ?>
-    <!-- <div id="log_in" class="log_bg log_display_a">
-        <form method="POST" action="" class="vertical-container box">
-            <img src="css/logo_f.png">
-            <input type="text" name="login" placeholder="Login">
-            <input type="password" name="password" placeholder="Hasło">
-            <input type="submit" value="Zaloguj się">
-        </form>
-    </div>
-    <div id="sign_in" class="log_bg log_display_a">
-        <form method="POST" action="" class="vertical-container box">
-            <img src="css/logo_f.png">
-                <input type="hidden" name="reg" value="reg">
-                <input type="text" name="login" placeholder="Podaj swój login">
-                <input type="password" name="password" placeholder="Hasło">
-                <input type="password" placeholder="Powtórz hasło">
-                <input type="submit" value="Utwórz konto">
-        </form>
-    </div> -->
+
     <?php
 
         require("like.php");
