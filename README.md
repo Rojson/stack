@@ -1,7 +1,7 @@
 # stack
-use xampp/n
-create database 'stack'
-import database from file stack.sql
-if you don't have folder called 'photos', you should create it in main folder 'stack'
+Use xampp.
+Create database 'stack'.
+Import database from file stack.sql.
+If you don't have folder called 'photos', you should create it in main folder 'stack'.
 
-after these steps whole project should works
+After these steps whole project should works.
