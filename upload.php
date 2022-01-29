@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     if(isset($_SESSION['username']))
     {   
         if(FALSE !== getimagesize($_FILES['image']['tmp_name']))
