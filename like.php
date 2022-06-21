@@ -28,7 +28,7 @@
             {
                 foreach($result as $value)
                 {
-                    echo "Liczba likeów: ".$value;
+                    echo "Liczba łapek: ".$value;
                 }
             }
         }

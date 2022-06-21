@@ -30,7 +30,7 @@
         $res = mysqli_query($conn, "SELECT obrazek FROM `obrazki` WHERE data_wygasniecia<NOW()") or die(mysqli_error($conn));
         mysqli_query($conn, "DELETE FROM `obrazek_kategorie` WHERE id_obrazka in(SELECT id_obrazka FROM `obrazki` WHERE data_wygasniecia<NOW())") or die(mysqli_error($conn));
         mysqli_query($conn, "DELETE FROM `polubienia` WHERE id_obrazka in((SELECT id_obrazka FROM `obrazki` WHERE data_wygasniecia<NOW()))") or die(mysqli_error($conn));
-        mysqli_query($conn, "DELETE FROM `obrazki` WHERE data_wygasniecia<NOW()") or die(mysqli_error($conn));
+        mysqli_query($conn, "DELETE FROM `obrazki` WHERE data_wygasniecia < NOW()") or die(mysqli_error($conn));
         foreach($res as $result)
         {
             foreach($result as $value)

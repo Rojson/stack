@@ -66,13 +66,13 @@
                     
     
                     #wyszukiwanie id użytkownika
-                    $sql = "SELECT id_uzytkownika FROM `uzytkownicy` WHERE login='$user'"; #sprawdza czy login już istnienie-----------------------------------------------
+                    $sql = "SELECT id_uzytkownika FROM `uzytkownicy` WHERE login='$user'"; -
     
                     $res = mysqli_query($conn, $sql) or die(mysqli_error());
                     if(mysqli_num_rows($res) == 1){
                         foreach($res as $result){
                             foreach($result as $value){
-                                $id_user = $value; #ID UŻYTKOWNIKA ZALOGOWANEGO
+                                $id_user = $value; 
                             }
                         }
     
